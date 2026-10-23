@@ -1,0 +1,13 @@
+PASS original planner preserved
+PASS missing-key setup and honest empty state
+PASS invalid endpoints rejected locally
+PASS configured-server missing key does not fabricate route
+PASS provider-response fixture renders exact route cards and paths
+PASS detour limit controls recommendation eligibility
+PASS selection updates path and calculated totals
+PASS mandatory unknown accessibility blocks recommendation
+PASS evidence export has fixture totals and assumptions without awards
+PASS mobile no horizontal overflow and keyboard focus
+PASS simulation remains available without provider
+PASS no runtime errors
+12 browser checks passed. Routes supplied by explicit test fixture, not a live routing account.

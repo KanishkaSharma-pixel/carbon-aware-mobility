@@ -1,0 +1,418 @@
+{
+  "modelVersion": "CASM-1.0",
+  "scenarioId": "district-20261021",
+  "seed": 20261021,
+  "exportedAt": "2026-10-23T05:14:53.291Z",
+  "mode": "Simulation mode",
+  "units": {
+    "time": "minutes",
+    "distance": "km",
+    "emissions": "kg operational proxy per passenger",
+    "currency": "USD",
+    "fuel": "litres per vehicle",
+    "energy": "kWh per vehicle"
+  },
+  "comparisonBasis": "Trip estimates per passenger at entered occupancy; city fixed occupancy 1. Baseline = fastest feasible road-only route at trip start with matching inputs.",
+  "assumptions": {
+    "currency": "USD",
+    "fuelPrice": 1.65,
+    "electricityPrice": 0.24,
+    "transitFare": 0.8,
+    "transitKgPerPassengerKm": 0.045,
+    "petrolFactor": 2.31,
+    "dieselFactor": 2.68,
+    "baseLitres": {
+      "Petrol car": 7.2,
+      "Diesel car": 5.8,
+      "Hybrid": 4.3
+    },
+    "idleLitresPerMinute": 0.02,
+    "boundary": "Operational proxy: combustion tailpipe CO2; EV electricity-generation CO2e; transit per-passenger operational proxy. Not a complete lifecycle or strictly harmonised CO2e inventory.",
+    "source": "Demo assumption—not a validated local factor",
+    "excluded": "Vehicle/battery manufacture, fuel upstream emissions, infrastructure, non-CO2 combustion effects, transit service allocation and induced demand."
+  },
+  "settings": {
+    "persona": "Eco-conscious traveller",
+    "vehicle": "Petrol car",
+    "occupancy": 1,
+    "grid": 420,
+    "weights": [
+      0.1,
+      0.05,
+      0.75,
+      0.1
+    ],
+    "stepFree": false,
+    "walkMax": 1000,
+    "slopeMax": 10,
+    "avoidUnknown": false,
+    "origin": 10,
+    "destination": 19,
+    "horizon": 20,
+    "incident": false,
+    "facility": 0,
+    "full": false,
+    "delay": 0,
+    "inaccessible": false,
+    "unavailable": false
+  },
+  "receipts": [
+    {
+      "id": "026f6e87-b053-4d52-b40d-3a8f19c30248",
+      "seed": 20261021,
+      "timestamp": "2026-10-23T05:14:52.807Z",
+      "route": "Park & Ride",
+      "vehicle": "Petrol car",
+      "occupancy": 1,
+      "baseline": {
+        "minutes": 12.665100709755873,
+        "km": 6.479999999999999,
+        "carbon": 1.5609897149533016,
+        "cost": 3.5149926535380724,
+        "fuel": 0.6757531233564076,
+        "energy": 0,
+        "idle": 6.394132967820388,
+        "rise": 99,
+        "movement": 1.1742765432098765,
+        "congestion": 4.038503225806453,
+        "id": "fast",
+        "name": "Fastest",
+        "color": "#cb8837",
+        "path": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "edges": [
+          {
+            "id": "10-11",
+            "a": 10,
+            "b": 11,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "11-12",
+            "a": 11,
+            "b": 12,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "12-13",
+            "a": 12,
+            "b": 13,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "13-14",
+            "a": 13,
+            "b": 14,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "14-15",
+            "a": 14,
+            "b": 15,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "15-16",
+            "a": 15,
+            "b": 16,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "16-17",
+            "a": 16,
+            "b": 17,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "17-18",
+            "a": 17,
+            "b": 18,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "18-19",
+            "a": 18,
+            "b": 19,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          }
+        ],
+        "feasible": true,
+        "reasons": [],
+        "access": "Verified step-free",
+        "walk": 0,
+        "score": 0.9,
+        "normal": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "points": 0,
+        "segments": [],
+        "why": "Direct expressway: shorter distance, but stop-start traffic and a $2.40 vehicle toll."
+      },
+      "actual": {
+        "minutes": 26.43333333333334,
+        "km": 7.420000000000001,
+        "carbon": 0.803496785163164,
+        "cost": 2.2350691322594027,
+        "fuel": 0.2636782619753957,
+        "energy": 0,
+        "idle": 2.3867867833641294,
+        "rise": 37,
+        "movement": 1.1535391362612875,
+        "congestion": 1.5007963133640558,
+        "id": "park",
+        "name": "Park & Ride",
+        "color": "#2675c7",
+        "path": [
+          10,
+          11,
+          12,
+          13,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          19
+        ],
+        "edges": [
+          {
+            "id": "10-11",
+            "a": 10,
+            "b": 11,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "11-12",
+            "a": 11,
+            "b": 12,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "12-13",
+            "a": 12,
+            "b": 13,
+            "corridor": 1,
+            "km": 0.72,
+            "speed": 62,
+            "capacity": 32,
+            "rise": 11,
+            "accessible": true,
+            "slope": 4
+          },
+          {
+            "id": "3-13",
+            "a": 3,
+            "b": 13,
+            "corridor": -1,
+            "km": 0.44,
+            "speed": 28,
+            "capacity": 75,
+            "rise": 4,
+            "accessible": true,
+            "slope": 2
+          }
+        ],
+        "walk": 500,
+        "feasible": true,
+        "reasons": [],
+        "access": "Verified step-free",
+        "score": 0.14256836652822036,
+        "normal": [
+          1,
+          0.4757876886503673,
+          0,
+          0.18778982095701974
+        ],
+        "points": 75,
+        "segments": [
+          {
+            "label": "Drive",
+            "minutes": 5.419966506866434,
+            "km": 2.6,
+            "carbon": 0.609096785163164,
+            "cost": 0.43506913225940286,
+            "access": "Verified step-free"
+          },
+          {
+            "label": "Park",
+            "minutes": 3,
+            "km": 0,
+            "carbon": 0,
+            "cost": 1,
+            "access": "Verified step-free"
+          },
+          {
+            "label": "Walk to platform",
+            "minutes": 4.333333333333334,
+            "km": 0.325,
+            "carbon": 0,
+            "cost": 0,
+            "access": "Verified step-free"
+          },
+          {
+            "label": "Wait",
+            "minutes": 3.246700159800241,
+            "km": 0,
+            "carbon": 0,
+            "cost": 0,
+            "access": "Verified step-free"
+          },
+          {
+            "label": "Transit",
+            "minutes": 8.100000000000001,
+            "km": 4.32,
+            "carbon": 0.19440000000000002,
+            "cost": 0.8,
+            "access": "Verified step-free"
+          },
+          {
+            "label": "Final walk",
+            "minutes": 2.3333333333333335,
+            "km": 0.175,
+            "carbon": 0,
+            "cost": 0,
+            "access": "Verified step-free"
+          }
+        ],
+        "facility": 0,
+        "why": "Canopy Interchange: drive, park and use a simulated transit departure. Includes every door-to-door segment; no transfers."
+      },
+      "saving": 0.7574929297901376,
+      "points": 75,
+      "settings": {
+        "persona": "Eco-conscious traveller",
+        "vehicle": "Petrol car",
+        "occupancy": 1,
+        "grid": 420,
+        "weights": [
+          0.1,
+          0.05,
+          0.75,
+          0.1
+        ],
+        "stepFree": false,
+        "walkMax": 1000,
+        "slopeMax": 10,
+        "avoidUnknown": false,
+        "origin": 10,
+        "destination": 19,
+        "horizon": 20,
+        "incident": false,
+        "facility": 0,
+        "full": false,
+        "delay": 0,
+        "inaccessible": false,
+        "unavailable": false
+      },
+      "events": [
+        "Trip started: Park & Ride. Baseline: Fastest, 1.56 kg per passenger.",
+        "Simulated journey completed; receipt and capped reward recorded once."
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "id": "ab8f4deb-418f-465d-9517-d5eab7e17f3f",
+      "type": "Transit credit",
+      "points": -20,
+      "timestamp": "2026-10-23T05:14:53.041Z",
+      "voucher": "DEMO-B7E17F3F"
+    },
+    {
+      "id": "award-026f6e87-b053-4d52-b40d-3a8f19c30248",
+      "type": "Trip reward",
+      "points": 75,
+      "timestamp": "2026-10-23T05:14:52.807Z"
+    }
+  ],
+  "cityExperiment": null,
+  "limitations": [
+    "Synthetic 30-node district, not a real city.",
+    "Scenario forecast range is ±15% demand, not confidence.",
+    "Mesoscopic corridor bottleneck model, not car-following.",
+    "Unfinished emissions estimated proportionally to elapsed trip time.",
+    "Tailpipe CO2 and electricity/transit CO2e proxies have incomplete, different boundaries.",
+    "No audited, certified or automatically reportable reductions."
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "passed": 12,
+  "errors": [],
+  "note": "Mocked provider-response integration tests. No real route or parking verification performed."
+}

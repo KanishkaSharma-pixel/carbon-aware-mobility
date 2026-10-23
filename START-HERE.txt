@@ -1,0 +1,17 @@
+CARBON-AWARE SMART MOBILITY — REAL-AREA UPGRADE
+
+FASTEST START: Node.js 24 recommended. The production build is included.
+1. Extract the ZIP.
+2. Open a terminal inside the carbon-mobility folder.
+3. Copy .env.example to a new file named .env.
+4. Put your openrouteservice key after ORS_API_KEY= in .env. Keep it private.
+5. Run: npm start
+6. Open http://localhost:4173 in your browser.
+7. Select Real-area planner. Enter actual location coordinates and find routes.
+
+NO KEY YET? The simulation lab works without one.
+OFFLINE / DOUBLE-CLICK: Open Carbon-Aware-Smart-Mobility.html for the
+self-contained simulation. Real routing needs the local server and internet.
+
+No real city or verified parking is preselected. Set your pilot locations.
+Read REAL-AREA-SETUP.md for setup, test results and honest limitations.

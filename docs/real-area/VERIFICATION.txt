@@ -1,0 +1,13 @@
+REAL-AREA UPGRADE VERIFICATION
+Build: passed
+TypeScript: passed
+Existing domain hashes: all seven unchanged
+Existing engine: 19 checks passed
+Existing simulation browser regression: 15 checks passed
+New routing API: 14 checks passed
+New real-route model: 7 checks passed
+New real-area browser integration: 12 checks passed
+Total: 67 checks passed
+Visual inspection: desktop real-area fixture, mobile fixture and packaged offline simulation screenshots inspected.
+
+Important: no user API key was supplied. Provider responses were mocked in tests; an authenticated real route and real tile availability have NOT been verified. Automated map tests block public tile requests intentionally. Test fixture geometry is only in tests/screenshots, not preloaded into the product.

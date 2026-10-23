@@ -1,0 +1,8 @@
+PASS 0-minute detour excludes slower candidate
+PASS 5-minute detour admits 4-minute alternative
+PASS time preference ranks fastest
+PASS passenger basis divides shared fuel cost and emissions
+PASS EV carbon responds to grid intensity
+PASS identical candidates have finite scores
+PASS all-zero weights do not produce NaN
+7 real-route model checks passed.

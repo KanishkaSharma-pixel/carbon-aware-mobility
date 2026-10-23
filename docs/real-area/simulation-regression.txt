@@ -1,0 +1,21 @@
+
+> carbon-aware-smart-mobility@1.0.0 test:e2e
+> node tests/e2e.mjs
+
+PASS populated planner loads with 3 route cards and feature checklist
+PASS route selection updates map and start action
+PASS persona changes ranking and controls
+PASS Park & Ride changes facility and includes 6 segments
+PASS keyboard opens and closes accessible dialog
+PASS incident can be declined without changing current route
+PASS trip completes once and receipt survives refresh
+PASS accept reroute uses connected alternative
+PASS greener completion earns once; redemption persists
+PASS export includes matching receipt values assumptions and units
+PASS paired experiment completes exact 1000 requests per scenario
+PASS all how-it-works pipeline stages open
+PASS mobile layout has no horizontal overflow, map survives offline
+PASS reduced-motion and keyboard paths remain usable
+PASS no browser runtime errors
+
+15 end-to-end checks passed.

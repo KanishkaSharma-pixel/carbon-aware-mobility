@@ -1,0 +1,41 @@
+{
+  "passed": 19,
+  "checks": [
+    "connected graph with 30 nodes / 35 edges",
+    "all candidate paths use actual connected edges",
+    "seeded road trade-offs are genuine",
+    "personas change recommended ranking",
+    "weights normalise safely including invalid and equal values",
+    "accessibility excludes unverified transfer and excess slopes",
+    "Park & Ride sums every segment exactly",
+    "parking full changes facility; no silent access relaxation",
+    "transit delay affects full itinerary; unavailability excludes it",
+    "occupancy splits road emissions and cost, not vehicle fuel",
+    "EV assumed grid intensity scales shared emission estimates",
+    "forecast varies with horizon and incident",
+    "experiment deterministic and shared cohort identical",
+    "vehicle conservation at every simulated minute",
+    "allocation emerges and responds to participation",
+    "capacity demand and incidents change outcomes",
+    "incident reroute starts at current node and uses connected edges",
+    "negative savings get no points and awards are capped",
+    "receipt awards exactly once; redemption validates and deducts"
+  ],
+  "seed": 20261021,
+  "actual": {
+    "baseline": [
+      0,
+      1000,
+      0
+    ],
+    "balanced": [
+      468,
+      411,
+      121
+    ],
+    "baselineMean": 37.29374829820503,
+    "balancedMean": 17.29087774732708,
+    "baselineKg": 2128.460736395245,
+    "balancedKg": 1282.403325414952
+  }
+}

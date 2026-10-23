@@ -1,0 +1,21 @@
+{
+  "passed": 15,
+  "checks": [
+    "populated planner loads with 3 route cards and feature checklist",
+    "route selection updates map and start action",
+    "persona changes ranking and controls",
+    "Park & Ride changes facility and includes 6 segments",
+    "keyboard opens and closes accessible dialog",
+    "incident can be declined without changing current route",
+    "trip completes once and receipt survives refresh",
+    "accept reroute uses connected alternative",
+    "greener completion earns once; redemption persists",
+    "export includes matching receipt values assumptions and units",
+    "paired experiment completes exact 1000 requests per scenario",
+    "all how-it-works pipeline stages open",
+    "mobile layout has no horizontal overflow, map survives offline",
+    "reduced-motion and keyboard paths remain usable",
+    "no browser runtime errors"
+  ],
+  "errors": []
+}

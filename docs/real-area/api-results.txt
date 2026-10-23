@@ -1,0 +1,15 @@
+PASS valid bounded coordinate pair
+PASS reject non-numeric
+PASS reject out of range
+PASS reject same endpoint
+PASS reject over 100 km
+PASS missing key produces honest setup error
+PASS adapter preserves provider geometry distance and duration
+PASS key used upstream but never returned
+PASS provider error 403
+PASS provider error 429
+PASS provider error 500
+PASS network error handled
+PASS no routes not fabricated
+PASS request throttling
+14 API checks passed. Provider responses mocked; no live account request performed.

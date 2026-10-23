@@ -1,0 +1,100 @@
+{
+  "type": "real-area-estimates-not-completed-trips",
+  "modelVersion": "CASM-Real-1.0",
+  "origin": {
+    "name": "Test origin — fixture",
+    "lat": "28.5",
+    "lon": "77.1"
+  },
+  "destination": {
+    "name": "Test destination — fixture",
+    "lat": "28.53",
+    "lon": "77.15"
+  },
+  "provider": "openrouteservice / OpenStreetMap",
+  "retrievedAt": "2026-10-23T10:00:00Z",
+  "exportedAt": "2026-10-23T05:15:42.972Z",
+  "vehicle": "EV",
+  "occupancy": 1,
+  "gridGPerKwh": 800,
+  "comparisonBasis": "per passenger, estimated operational proxy",
+  "detourMinutes": 5,
+  "weights": [
+    30,
+    20,
+    50
+  ],
+  "routes": [
+    {
+      "id": "ors-1",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            77.1,
+            28.5
+          ],
+          [
+            77.1,
+            28.53
+          ],
+          [
+            77.15,
+            28.53
+          ]
+        ]
+      },
+      "metres": 5000,
+      "seconds": 840,
+      "km": 5,
+      "minutes": 14,
+      "fuel": 0,
+      "energy": 1.018,
+      "carbon": 0.8144,
+      "cost": 0.24431999999999998,
+      "feasible": true,
+      "score": 0.3
+    },
+    {
+      "id": "ors-0",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            77.1,
+            28.5
+          ],
+          [
+            77.13,
+            28.51
+          ],
+          [
+            77.15,
+            28.53
+          ]
+        ]
+      },
+      "metres": 6000,
+      "seconds": 600,
+      "km": 6,
+      "minutes": 10,
+      "fuel": 0,
+      "energy": 1.1400000000000001,
+      "carbon": 0.9120000000000001,
+      "cost": 0.2736,
+      "feasible": true,
+      "score": 0.7
+    }
+  ],
+  "selectedId": "ors-1",
+  "assumptions": {
+    "fuelPriceUsdPerL": 1.65,
+    "electricityUsdPerKwh": 0.24,
+    "traffic": "Not connected",
+    "elevation": "Unknown; no adjustment",
+    "accessibility": "Unverified",
+    "parking": "Not connected",
+    "emissions": "Demo factors; no traffic or elevation adjustment; not a harmonised lifecycle inventory"
+  },
+  "limitations": "No measured savings, no live traffic, no completed trip or reward award."
+}

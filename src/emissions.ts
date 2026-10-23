@@ -1,0 +1,10 @@
+import {Edge,Settings,Totals} from './domain';
+export const assumptions={currency:'USD',fuelPrice:1.65,electricityPrice:.24,transitFare:.8,transitKgPerPassengerKm:.045,petrolFactor:2.31,dieselFactor:2.68,baseLitres:{'Petrol car':7.2,'Diesel car':5.8,'Hybrid':4.3},idleLitresPerMinute:.020,boundary:'Operational proxy: combustion tailpipe CO2; EV electricity-generation CO2e; transit per-passenger operational proxy. Not a complete lifecycle or strictly harmonised CO2e inventory.',source:'Demo assumption—not a validated local factor',excluded:'Vehicle/battery manufacture, fuel upstream emissions, infrastructure, non-CO2 combustion effects, transit service allocation and induced demand.'};
+export function roadTotals(es:Edge[],s:Settings,load=1):Totals{const km=es.reduce((a,e)=>a+e.km,0),rise=es.reduce((a,e)=>a+e.rise,0);let free=0,idle=0,congestion=0;for(const e of es){const base=e.km/e.speed*60;const q=(e.corridor===1?1.12:e.corridor===0?.63:.72)*(1+s.horizon/100)*load;const factor=(s.incident&&(!s.blockedEdge?e.corridor===1:e.id===s.blockedEdge))?15:1;free+=base;idle+=base*.42*Math.min(12,Math.pow(q,3))*factor;congestion+=Math.max(0,q-.7)*base*factor;}
+const movement=1+Math.min(.22,rise/Math.max(1,km)/180)+Math.min(.18,congestion/Math.max(1,free)*.1)+.025;
+const fuel=s.vehicle==='EV'?0:km*assumptions.baseLitres[s.vehicle]/100*movement+idle*assumptions.idleLitresPerMinute;
+const energy=s.vehicle==='EV'?km*.17*movement+(free+idle)*.012:0;
+const kg=s.vehicle==='EV'?energy*s.grid/1000:fuel*(s.vehicle==='Diesel car'?2.68:2.31);
+return {minutes:free+idle,km,carbon:kg/s.occupancy,cost:(fuel*assumptions.fuelPrice+energy*assumptions.electricityPrice)/s.occupancy,fuel,energy,idle,rise,movement,congestion};}
+export function sumTotals(a:Totals,b:Totals):Totals{const o={...a};for(const k of ['minutes','km','carbon','cost','fuel','energy','idle','rise','congestion'])o[k]=a[k]+b[k];return o;}
+export const zero:Totals={minutes:0,km:0,carbon:0,cost:0,fuel:0,energy:0,idle:0,rise:0,movement:1,congestion:0};

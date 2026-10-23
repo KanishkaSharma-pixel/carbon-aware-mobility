@@ -1,0 +1,10 @@
+export type Vehicle='Petrol car'|'Diesel car'|'Hybrid'|'EV';
+export type Node={id:number;x:number;y:number;row:number;col:number};
+export type Edge={id:string;a:number;b:number;km:number;speed:number;capacity:number;rise:number;accessible:boolean|null;slope:number;corridor:number};
+export type Settings={persona:string;vehicle:Vehicle;occupancy:number;grid:number;weights:number[];stepFree:boolean;walkMax:number;slopeMax:number;avoidUnknown:boolean;origin:number;destination:number;horizon:number;incident:boolean;blockedEdge?:string;facility:number;full:boolean;delay:number;inaccessible:boolean;unavailable:boolean};
+export type Totals={minutes:number;km:number;carbon:number;cost:number;fuel:number;energy:number;idle:number;rise:number;movement:number;congestion:number};
+export type Segment={label:string;minutes:number;km:number;carbon:number;cost:number;access:string};
+export type Route=Totals&{id:string;name:string;color:string;path:number[];edges:Edge[];feasible:boolean;reasons:string[];access:string;walk:number;score:number;normal:number[];points:number;segments:Segment[];why:string;facility?:number};
+export type Receipt={id:string;seed:number;timestamp:string;route:string;vehicle:Vehicle;occupancy:number;baseline:Totals;actual:Totals;saving:number;points:number;settings:Settings;events:string[]};
+export type Transaction={id:string;type:string;points:number;timestamp:string;voucher?:string};
+export type Wallet={receipts:Receipt[];transactions:Transaction[]};

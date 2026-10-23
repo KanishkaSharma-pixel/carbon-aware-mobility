@@ -1,0 +1,5 @@
+
+> carbon-aware-smart-mobility@1.0.0 test:guide
+> node tests/guide.mjs
+
+{"receipts":2,"points":55,"redeemed":true,"downloads":1,"errors":[]}

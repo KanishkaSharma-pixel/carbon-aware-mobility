@@ -1,0 +1,25 @@
+
+> carbon-aware-smart-mobility@1.0.0 test
+> node tests/engine.mjs
+
+PASS connected graph with 30 nodes / 35 edges
+PASS all candidate paths use actual connected edges
+PASS seeded road trade-offs are genuine
+PASS personas change recommended ranking
+PASS weights normalise safely including invalid and equal values
+PASS accessibility excludes unverified transfer and excess slopes
+PASS Park & Ride sums every segment exactly
+PASS parking full changes facility; no silent access relaxation
+PASS transit delay affects full itinerary; unavailability excludes it
+PASS occupancy splits road emissions and cost, not vehicle fuel
+PASS EV assumed grid intensity scales shared emission estimates
+PASS forecast varies with horizon and incident
+PASS experiment deterministic and shared cohort identical
+PASS vehicle conservation at every simulated minute
+PASS allocation emerges and responds to participation
+PASS capacity demand and incidents change outcomes
+PASS incident reroute starts at current node and uses connected edges
+PASS negative savings get no points and awards are capped
+PASS receipt awards exactly once; redemption validates and deducts
+
+19 engine checks passed.
